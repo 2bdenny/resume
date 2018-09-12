@@ -3,49 +3,59 @@
 \documentclass{resume}
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{geometry}
+\geometry{top=1.0cm, bottom=0.5cm}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
-
-\name{Bin Yuan}
+\name{Yuju Shen}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{denny.syj@hotmail.com} \textperiodcentered\
+  \phone{(+86)15861812223} \textperiodcentered\
+  \homepage{http://moon.nju.edu.cn/people/yjshen}
+}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{Nanjing University (NJU)}, Jiangsu, China}{2016 -- Present}
+\textit{Master student} in Dept. of Computer Science and Technology (CS), expected June 2016
+\datedsubsection{\textbf{Nanjing University (NJU)}, Jiangsu, China}{2012 -- 2016}
+\textit{B.S.} in Dept. of Computer Science and Technology (CS)
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\section{\faUsers\ Internship}
+\datedsubsection{\textbf{Tencent Inc./TEG} Shenzhen, China}{Jun. 2018 -- Aug. 2018}
+\role{Summer Intern}{C++/Python}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Construct the testing enviroment of PCDN client (C++/Python)
+  \item PCDN client distribution script (Python)
+  \item Front-end development of Bitcoin auto-trading system and testing organization
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\section{\faSearch\ Projects}
+\datedsubsection{\textbf{ReScue}}{Jun. 2017 -- Apr. 2018}
+\role{Research Interest}{ASE'18, CCF-A, First Author~\cite{shen2018rescue}}
+A tool of the detection of regexes' DoS vulnerabilities. \\
+Open sourced on GitHub: https://github.com/2bdenny/ReScue
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Regex extracter which supports multiple programming languages
+  \item Genetic algorithm based ReDoS vulnerabilities detection tool
+  \item A simulator of regex matching
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\datedsubsection{\textbf{BungoHelper}}{Apr. 2017}
+\role{For Interest}{JavaScript}
+A chrome plugin for web game, Bunka and Alchemist. \\
+Open sourced on GitHub: https://github.com/2bdenny/Bungo\_Helper
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Hijack the response from server, extract its hidden message and present it on devtool tab
+\end{itemize}
+
+\datedsubsection{\textbf{MR.Hunter}}{Nov. 2015 -- Nov. 2016}
+\role{Research Interest}{Python, Web}
+A demo of metarmophic testing (This kind of testing can be used to test non-orable programs).
+\begin{itemize}
+  \item An online-judge system for MT code submitting and auto-varification
+  \item User management, ranking for fun, and duplication code detection are supported
 \end{itemize}
 
 % Reference Test
@@ -57,24 +67,16 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
+  \item Programming Languages: Java > Python == C/C++
   \item Platform: Linux
-  \item Development: Web, xxx
+  \item English: CET-6
 \end{itemize}
 
 \section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
-\end{itemize}
+\datedline{ACM SIGSOFT Distinguished PAPER AWARD}{Sep. 2018}
 
 %% Reference
 %\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\bibliographystyle{IEEEtran}
+\bibliography{mycite}
 \end{document}

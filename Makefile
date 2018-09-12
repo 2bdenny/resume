@@ -1,17 +1,20 @@
-SRC = $(wildcard *.tex)
+.PHONY: all en zh_CN
 
-PDFS = $(SRC:.tex=.pdf)
+all: clean zh_CN en
 
-all:	clean pdf
+en:
+	make clean
+	xelatex resume.tex
+	bibtex resume
+	xelatex resume.tex
+	xelatex resume.tex
 
-en:	clean xelatex resume.tex
-
-zh_CN:	clean xelatex resume-zh_CN.tex
-
-pdf:	clean $(PDFS)
-
-%.pdf:  %.tex
-	xelatex $<
+zh_CN:
+	make clean
+	xelatex resume-zh_CN.tex
+	bibtex resume-zh_CN
+	xelatex resume-zh_CN.tex
+	xelatex resume-zh_CN.tex
 
 ifeq ($(OS),Windows_NT)
   # on Windows
@@ -22,4 +25,4 @@ else
 endif
 
 clean:
-	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind
