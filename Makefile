@@ -1,4 +1,4 @@
-.PHONY: all en zh_CN
+.PHONY: all en zh_CN rh
 
 all: clean zh_CN en
 
@@ -15,6 +15,13 @@ zh_CN:
 	bibtex resume-zh_CN
 	xelatex resume-zh_CN.tex
 	xelatex resume-zh_CN.tex
+
+rh:
+	make clean
+	xelatex resume-zh_CN_research.tex
+	bibtex resume-zh_CN_research
+	xelatex resume-zh_CN_research.tex
+	xelatex resume-zh_CN_research.tex
 
 ifeq ($(OS),Windows_NT)
   # on Windows
